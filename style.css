@@ -1,0 +1,92 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'ui-monospace', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    padding: 2rem;
+    overflow: hidden;
+    border: 0.25px solid #c5c5c5;
+    border-radius: 20px;
+    background-color: navy;
+    backdrop-filter: blur(800px);
+    box-shadow: 0 0 40px 15px blue;
+    min-width: 344px;
+    max-width: 800px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px blue;
+}
+
+.title {
+    font-size: 2rem;
+    color: #8e8e8e;
+    text-shadow: 0 0 5px blue;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: lightblue;
+}
+
+.wrap {
+    background-color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px deepskyblue;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrap:hover {
+    transform: scale(1.05); /* Slightly grow the section */
+    box-shadow: 0 0 20px deepskyblue; /* Enhance the shadow when hovering */
+}
+
+.project-item {
+    background-color: #202425;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px blue;
+    margin-bottom: 1rem;
+}
+
+.project-item h4 {
+    color: #e34ba9;
+    margin-bottom: 0.5rem;
+}
+.download-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px deepskyblue;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: darkblue;
+    box-shadow: 0 0 25px deepskyblue;
+}
+
+

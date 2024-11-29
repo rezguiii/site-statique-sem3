@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezgui Amine - E-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        /* Styles for your card (already included in previous code) */
+        .card {
+            padding: 0.75rem;
+            overflow: hidden;
+            border: 0.25px solid #c5c5c5;
+            border-radius: 20px;
+            background-color: navy;
+            backdrop-filter: blur(800px);
+            box-shadow: 0 0 40px 15px blue;
+            min-width: 344px;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            z-index: 10;
+            border: 0.5px solid #525252;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Styles for each section */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Initially hidden */
+            transform: translateY(50px); /* Slide from below */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0); /* Slide to original position */
+        }
+
+        .project-item {
+            margin: 15px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <div class="profile-pic">
+                <img src="your_profile_picture.jpg" alt="Your Profile Picture">
+            </div>
+            <h1 class="title">Rezgui Amine</h1>
+            <h2>Creative and Innovative Embedded and Mobile Systems Student</h2>
+        </header>
+
+        <section id="contact" class="wrap section">
+            <h2>Contact</h2>
+            <p>Location: Tunisia</p>
+            <p>Phone Number: +216 20309723</p>
+            <p>Email Address: rezguiamine037@gmail.com</p>
+        </section>
+
+        <main>
+            <section id="summary" class="wrap section body">
+                <h2>Summary</h2>
+                <p>Innovative embedded systems student passionate about embedded technologies and the Internet of Things. I am seeking an opportunity to apply my skills in programming and embedded systems design in a dynamic professional environment.</p>
+            </section>
+
+            <section id="experience" class="wrap section">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <h4>Advanced Internship - Sagemcom</h4>
+                    <p>Jan-Feb 2024</p>
+                    <ul>
+                        <li>Discovery of electronic services</li>
+                        <li>Labeling station project</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h4>Initiation Internship - SAIPH</h4>
+                    <p>Jan-Feb 2023</p>
+                    <ul>
+                        <li>Discovery of the company's operations</li>
+                        <li>Learned a new software SAGEX3, SQL language</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="education" class="wrap section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h4>Bachelor's degree in IT (Embedded Systems)</h4>
+                    <p>Higher Institute of Technological Studies of Rades</p>
+                    <p>September 2022 - Present</p>
+                </div>
+                <div class="education-item">
+                    <h4>Baccalaureate in Technical Sciences</h4>
+                    <p>Fouchna AMAL Highschool</p>
+                    <p>2021</p>
+                </div>
+            </section>
+
+            <section id="projects" class="wrap section">
+                <h2>Projects</h2>
+
+                <div class="project-item">
+                    <h4>HelpCasaMobile (Android App)</h4>
+                    <p>Development of a mobile application for real estate agency management, including property, client, and transaction management.</p>
+                    <p><strong>Course:</strong> Mobile Development</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>Car Rental System</h4>
+                    <p>Design and development of a management system for a car rental agency using PHP and MySQL.</p>
+                    <p><strong>Course:</strong> Web Development</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>IoT Project on Raspberry Pi</h4>
+                    <p>Used an AHT10 sensor to read temperature and humidity data. Sent data to an MQTT broker via a Python application.</p>
+                </div>
+
+                <div class="project-item">
+                    <h4>Smart Lock (Arduino)</h4>
+                    <ul>
+                        <li>IoT smart lock controlled via mobile app (Blynk)</li>
+                        <li>Enables remote unlocking with smartphones</li>
+                        <li>Secure, convenient</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills" class="wrap section">
+                <h2>Skills</h2>
+                <div class="skill-group">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>JAVA, C++, VHDL, C, EMBEDDED C</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="interests" class="wrap section">
+                <h2>Interests</h2>
+                <ul>
+                    <li>Cybersecurity</li>
+                    <li>Embedded Linux</li>
+                    <li>Trading</li>
+                    <li>Real Estate</li>
+                </ul>
+            </section>
+
+            <section id="languages" class="wrap section">
+                <h2>Languages</h2>
+                <div class="language-item">
+                    <h4>English</h4>
+                    <p>Advanced</p>
+                    <h4>French</h4>
+                    <p>Intermediate</p>
+                    <h4>Arabic</h4>
+                    <p>Native</p>
+                </div>
+            </section>
+            <section id="download" class="wrap section">
+                <h2>Download My Portfolio</h2>
+                <a href="Rezgui_Amine_CV.pdf" download="Rezgui_Amine_CV.pdf" class="download-btn">Download CV</a>
+
+            </section>
+        </main>
+    </div>
+</body>
+</html>
