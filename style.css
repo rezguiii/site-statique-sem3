@@ -1,3 +1,4 @@
+
 body {
     background-color: #121212;
     color: white;
@@ -15,13 +16,32 @@ body {
     overflow: hidden;
     border: 0.25px solid #c5c5c5;
     border-radius: 20px;
-    background-color: navy;
+    background-color: black; /* Set card background to black */
     backdrop-filter: blur(800px);
     box-shadow: 0 0 40px 15px blue;
     min-width: 344px;
     max-width: 800px;
+    color: white; /* Set text color to white */
+    word-wrap: break-word; /* Ensure long words wrap onto the next line */
+    word-break: normal; /* Prevent breaking words in the middle */
+    white-space: normal; /* Allow normal text wrapping */
+    text-align: left; /* Align text to the left */
 }
 
+h2, p {
+    word-wrap: break-word; /* Ensure long words break correctly */
+    word-break: normal; /* Prevent word splitting inappropriately */
+    white-space: normal; /* Allow the text to wrap naturally */
+    margin: 0; /* Remove extra spacing if any */
+    padding: 0; /* Remove extra padding */
+}
+
+.animated-text {
+    display: block; /* Ensure the text is in a block to control layout better */
+    word-wrap: break-word; /* Ensure long words break correctly */
+    word-break: break-word; /* Ensure no words split wrongly */
+    white-space: normal; /* Allow wrapping */
+}
 header {
     text-align: center;
     margin-bottom: 2rem;
@@ -31,13 +51,13 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    box-shadow: 0 0 15px 5px blue;
+    box-shadow: 0 0 15px 5px deepskyblue;
 }
 
 .title {
     font-size: 2rem;
-    color: #8e8e8e;
-    text-shadow: 0 0 5px blue;
+    color: #e8e8e8;
+    text-shadow: 0 0 5px #00b8d4; /* Lighter cyan text shadow */
 }
 
 h2 {
@@ -46,7 +66,7 @@ h2 {
 }
 
 .wrap {
-    background-color: black;
+    background-color: #1f1f1f; /* Dark background for the sections */
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1.5rem;
@@ -55,15 +75,15 @@ h2 {
 }
 
 .wrap:hover {
-    transform: scale(1.05); /* Slightly grow the section */
-    box-shadow: 0 0 20px deepskyblue; /* Enhance the shadow when hovering */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px deepskyblue;
 }
 
 .project-item {
     background-color: #202425;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px 5px blue;
+    box-shadow: 0 0 10px 5px #00b8d4; /* Lighter blue shadow for contrast */
     margin-bottom: 1rem;
 }
 
@@ -71,6 +91,7 @@ h2 {
     color: #e34ba9;
     margin-bottom: 0.5rem;
 }
+
 .download-btn {
     display: inline-block;
     padding: 1rem 2rem;
@@ -85,8 +106,108 @@ h2 {
 }
 
 .download-btn:hover {
-    background-color: darkblue;
-    box-shadow: 0 0 25px deepskyblue;
+    background-color: #008cba;
+    box-shadow: 0 0 25px #00b8d4;
 }
 
+.profiles {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.profiles a {
+    color: #00b8d4; /* Light cyan color for the links */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.profiles a:hover {
+    text-decoration: underline;
+    color: deepskyblue; /* Change to a brighter cyan on hover */
+}
+
+.profiles img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* CSS for rotating container */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
+  animation: rotate_3922 1.2s linear infinite;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+.container span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+.container span:nth-of-type(3) {
+  filter: blur(25px);
+}
+
+.container span:nth-of-type(4) {
+  filter: blur(50px);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  border: solid 5px #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.animated-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px); /* Start from slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
 
